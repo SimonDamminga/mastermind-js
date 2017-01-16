@@ -1,18 +1,12 @@
-#bg{
+/*algemeen*/
+body{
+	margin: 0;
+	padding: 0;
 	user-select: none;
-	background-color: #ffff;
-}
-main{
-	height: 100%;
-	width: 100%;	
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 /*startknop*/
 #start{
-	position: absolute;
-	display: block;
+	display: inline-block;
 	color: white;
 	background-color: #840027;
 	font-weight: bold;
@@ -27,72 +21,27 @@ main{
 	font-size: 35px;
 	background-color: #a50031;
 }
-#blue{
-	color: #00797f;
-}
-#yellow{
-	color: #a84800;
-}
-#red{
-	color: #00a84b;
-}
-#green{
-	color: #e8e8e8;
-}
-/*mastermind*/
-#mastermind{
-	display: none;
-	height: 900px;
-	width: 600px;
-	background-color: #6d0000;
-	box-shadow: 0px 0px 10px 10px #6d0000;
-}
-#kader{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
+#blue{color: #00797f;}
+#yellow{color: #a84800;}
+#red{color: #00a84b;}
+#green{color: #e8e8e8;}
+/*playfield*/
+#mainwindow{
 	height: 100%;
-
-}
-.dingen{
-	display: table;
-	text-align: center;
-	width: 550px;
-	height: 60px;
-	background-color: #380000;
-}
-#een{
-	margin-top: 
-}
-p{
-	display: table-cell;
-	margin: 0;
-	font-size: 30px;
-	vertical-align: middle;
-	color: #636363;
-	font-family: verdana;
-}
-h2{
-	background-color: black;
-}
-i:hover{
-	cursor: pointer;
-}
-.cube{
-	height: 100px;
-	width: 100px;
-	margin: 5px;
-	border: 2px solid black;
-}
-#ding{
-	height: 110px;
-	width: 420px;
+	width: 100%;
+	background-color: orange;
 	display: flex;
-	background-color: gray;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+#displaywindow{
+	height: 100%;
+	width: 100%;
+	display: none;
 }
 #playfield{
-	height: 1330px;
+	height: 1440px;
 	width: 500px;
 	background-color: black;
 }
@@ -112,59 +61,6 @@ i:hover{
 	border-radius: 45px;
 	border: 1px solid black;
 }
-#colorpicker{
-	height: 600px;
-	width: 100px;
-	background-color: gray;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 70px;
-}
-#one{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #00797f;
-	margin: 5px;
-}
-#two{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #a84800;
-	margin: 5px;	
-}
-#three{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #00a84b;
-	margin: 5px;	
-}
-#four{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #e0dd35;
-	margin: 5px;	
-}
-#five{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #e8e8e8;
-	margin: 5px;	
-}
-#six{
-	height: 90px;
-	width: 90px;
-	border-radius: 45px;
-	background-color: #2d2d2d;
-	margin: 5px;
-}
-.doei:hover{
-	cursor: pointer;
-}
 .pins{
 	margin: 5px;
 	height: 90px;
@@ -180,3 +76,49 @@ i:hover{
 	border: 1px solid black;
 	background-color: gray;
 }
+/*text in playfield*/
+#sometext{
+	display: table-cell;
+	margin: 0;
+	font-size: 30px;
+	vertical-align: middle;
+	color: #636363;
+	font-family: verdana;
+	color: white;
+	text-align: center;
+	text-shadow: 4px 4px black;
+}
+.reveal{
+	margin-top: 10px;
+	margin-left: 10px;
+	max-width: 120px;
+	display: table-cell;
+}
+/*colorpicker*/
+#colorpicker{
+	height: 600px;
+	width: 200px;
+	background-color: gray;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 70px;
+}
+#one{background-color: #00797f;}
+#two{background-color: #a84800;	}
+#three{background-color: #00a84b;}
+#four{background-color: #e0dd35;}
+#five{background-color: #e8e8e8;}
+#six{background-color: #2d2d2d;}
+#seven{background-color: #810bbc;}
+#eight{background-color: #cc009f;}
+#nine{background-color: #010f77;}
+#ten{background-color: #004c04;}
+#eleven{background-color: #ff9400;}
+#twelve{background-color: #a80000;}
+.select{
+	height: 90px;
+	width: 90px;
+	border-radius: 45px;
+	margin: 5px;
+}
+.select:hover{cursor: pointer;}
