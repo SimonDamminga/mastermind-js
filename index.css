@@ -5,6 +5,15 @@ body{
 	user-select: none;
 }
 /*startknop*/
+#startmenu{
+	background-color: #7f1515;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+}
 #start{
 	display: inline-block;
 	color: white;
@@ -12,6 +21,8 @@ body{
 	font-weight: bold;
 	font-family: verdana;
 	border-radius: 5px;
+	border: 1px solid black;
+	box-shadow: 2px 2px black;
 	padding: 10px 20px 10px 20px;
 	transition: 0.3s;
 }
@@ -29,7 +40,7 @@ body{
 #mainwindow{
 	height: 100%;
 	width: 100%;
-	background-color: orange;
+	background-color: #6b0000;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -49,7 +60,7 @@ body{
 	height: 100px;
 	width: 550px;
 	margin: 10px;
-	background-color: red;
+	background-color: #7f1515;
 	display: flex;
 	flex-wrap: nowrap;
 }
@@ -122,3 +133,12 @@ body{
 	margin: 5px;
 }
 .select:hover{cursor: pointer;}
+button{
+	padding: 10px;
+	font-size: 30px;
+	color: white;
+	background-color: #7f1515;
+	font-family: verdana;
+	font-weight: bold;
+	border: 2px outset black;
+}

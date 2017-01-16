@@ -8,6 +8,7 @@ var color = ["#00797f", "#a84800", "#00a84b", "#e0dd35", "#e8e8e8", "#2d2d2d", "
 function start(){
 	document.getElementById("start").style.display = "none";
 	document.getElementById("displaywindow").style.display = "block";
+	document.getElementById("startmenu").style.display = "none";
 }
 function randomiser(a){
 	var i,
@@ -27,7 +28,7 @@ function codee(){
 		code.push(color[i]);
 	}
 	console.log(code);
-	document.getElementById("codegen").innerHTML = "code generated";
+	document.getElementById("codegen").innerHTML = "Code gemaakt";
 }
 function iest(n){	
 	if(playerCode.length < 4){
