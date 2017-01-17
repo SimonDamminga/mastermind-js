@@ -8,6 +8,29 @@
 	<script src="index.js"></script>
 </head>
 <body>
+	<header>
+		<button id="codegen" onclick="codee()">
+			<div>Maak code</div>
+		</button>
+		<button id="reset" onclick="reset()">
+			Reset het spel
+		</button>
+		<div id="colorpicker">
+			<div onclick="iest('blue')" class="select" id="one"></div>
+			<div onclick="iest('brouwn')" class="select" id="two"></div>
+			<div onclick="iest('green')" class="select" id="three"></div>
+			<div onclick="iest('yellow')" class="select" id="four"></div>
+			<div onclick="iest('white')" class="select" id="five"></div>
+			<div onclick="iest('black')" class="select" id="six"></div>
+			<div onclick="iest('purple')" class="select" id="seven"></div>
+			<div onclick="iest('pink')" class="select" id="eight"></div>
+			<div onclick="iest('darkblue')" class="select" id="nine"></div>
+			<div onclick="iest('darkgreen')" class="select" id="ten"></div>
+			<div onclick="iest('orange')" class="select" id="eleven"></div>
+			<div onclick="iest('red')" class="select" id="twelve"></div>
+			<div onclick="undo()" class="select" id="undo"><i id="text" class="fa fa-undo" aria-hidden="true"></i></div>
+		</div>
+	</header>
 	<main>
 		<div id="startmenu">
 			<h1 id="start" onclick="start()">
@@ -175,25 +198,8 @@
 							</div>
 					</div>
 				</div>
-				<div id="colorpicker">
-					<div onclick="iest('blue')" class="select" id="one"></div>
-					<div onclick="iest('brouwn')" class="select" id="two"></div>
-					<div onclick="iest('green')" class="select" id="three"></div>
-					<div onclick="iest('yellow')" class="select" id="four"></div>
-					<div onclick="iest('white')" class="select" id="five"></div>
-					<div onclick="iest('black')" class="select" id="six"></div>
-					<div onclick="iest('purple')" class="select" id="seven"></div>
-					<div onclick="iest('pink')" class="select" id="eight"></div>
-					<div onclick="iest('darkblue')" class="select" id="nine"></div>
-					<div onclick="iest('darkgreen')" class="select" id="ten"></div>
-					<div onclick="iest('orange')" class="select" id="eleven"></div>
-					<div onclick="iest('red')" class="select" id="twelve"></div>
-				</div>
-				<button id="codegen" onclick="codee()">
-					<div>Maak code</div>
-				</button>
 			</div>
-		</div>
+		</div>	
 	</main>
 </body>
 </html>

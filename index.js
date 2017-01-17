@@ -3,7 +3,6 @@ var playerCode = [];
 var a = 12;
 var keyWhite = [];
 var keyBlack = [];
-var count = 0;
 var color = ["#00797f", "#a84800", "#00a84b", "#e0dd35", "#e8e8e8", "#2d2d2d", "#810bbc", "#cc009f", "#010f77", "#004c04", "#ff9400", "#a80000"];
 function start(){
 	document.getElementById("start").style.display = "none";
@@ -27,7 +26,7 @@ function codee(){
 	for(var i = 4; i <= 7; i++){
 		code.push(color[i]);
 	}
-	console.log(code);
+	document.getElementById("codegen").style.backgroundColor = "green";
 	document.getElementById("codegen").innerHTML = "Code gemaakt";
 }
 function iest(n){	
@@ -70,17 +69,14 @@ function iest(n){
 		for(var i = 0; i <= 3; i++){
 			if(playerCode[i] === code[i]){
 				keyBlack.push("black");
-				count++;
 			}
 		}
-		
 		for(var i = 0; i <= 3; i++){
 			document.getElementById("sp"+a+"-"+i).style.backgroundColor = keyWhite[i];
 		}
 		for(var i = 0; i <= 3; i++){
 			document.getElementById("sp"+a+"-"+i).style.backgroundColor = keyBlack[i];		
-		}			
-
+		}
 		if(a <= 1){
 			document.getElementById("mainwindow").style.backgroundColor = "red";
 			for(var i = 0; i <= code.length; i++){
@@ -98,5 +94,28 @@ function iest(n){
 		playerCode = [];
 		a--;
 	}
-
+}
+function reset(){
+	for(var i = 1; i <= 12; i++){
+		for(var o = 0; o <= 3; o++){
+			document.getElementById("pin"+i+"-"+o).style.backgroundColor = "gray";			
+			document.getElementById("sp"+i+"-"+o).style.backgroundColor = "gray";
+		}
+		a++;
+	}
+	for(var i = 0; i <= 3; i++){
+		document.getElementById("reveal-"+i).style.backgroundColor = "gray";
+	}
+	a = 12;
+	keyWhite = [];
+	keyBlack = [];
+	playerCode = [];
+	code = [];
+	document.getElementById("codegen").style.backgroundColor = "#7f1515";
+	document.getElementById("codegen").innerHTML = "Maak code";
+	document.getElementById("mainwindow").style.backgroundColor = "#c4c4c4"
+}
+function undo(){
+	playerCode.pop();
+	document.getElementById("pin"+a+"-"+playerCode.length).style.backgroundColor = "gray";
 }
