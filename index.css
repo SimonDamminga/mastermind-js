@@ -40,7 +40,7 @@ body{
 #mainwindow{
 	height: 100%;
 	width: 100%;
-	background-color: /*#6b0000*/#c4c4c4;
+	background-color: #c4c4c4;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -183,4 +183,43 @@ button:hover{
 }
 header{
 	position: fixed;
+}
+#infovenster{
+	position: absolute;
+	height: 200px;
+	width: 550px;
+	background-color: gray;
+	border: 2px solid black;
+	border-radius: 20px;
+	top: 630px;
+	left: 190px;
+	display: none;
+}
+ul{
+	list-style-type: square;
+	font-family: verdana;
+}
+#info{
+	display: table;
+	text-align: center;
+	background-color: black;
+}
+#close{
+	padding: 0px 5px 2px 5px;
+	background-color: red;
+	border-radius: 20px;
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	left: 510px;
+	top: -10px;
+	transition: 0.3s;
+}
+#close:hover{
+	cursor: pointer;
+	background-color: #ba0000;
+	color: #303030;
+}
+#randomDiv{
+	position: relative;
 }

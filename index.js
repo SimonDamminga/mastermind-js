@@ -23,7 +23,7 @@ function randomiser(a){
 function codee(){
 	randomiser(color);
 	code = [];
-	for(var i = 4; i <= 7; i++){
+	for(var i = 0; i <= 3; i++){
 		code.push(color[i]);
 	}
 	document.getElementById("codegen").style.backgroundColor = "green";
@@ -118,4 +118,10 @@ function reset(){
 function undo(){
 	playerCode.pop();
 	document.getElementById("pin"+a+"-"+playerCode.length).style.backgroundColor = "gray";
+}
+function infoshow(){
+	document.getElementById("infovenster").style.display = "block";
+}
+function infohide(){
+	document.getElementById("infovenster").style.display = "none";
 }

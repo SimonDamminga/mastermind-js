@@ -29,6 +29,23 @@
 			<div onclick="iest('orange')" class="select" id="eleven"></div>
 			<div onclick="iest('red')" class="select" id="twelve"></div>
 			<div onclick="undo()" class="select" id="undo"><i id="text" class="fa fa-undo" aria-hidden="true"></i></div>
+			<div onclick="infoshow()"  class="select" id="info"><i id="text" class="fa fa-info" aria-hidden="true"></i></div>
+			<section id="infovenster">
+				<div id="randomDiv">
+					<ul>
+						<li>Klik op "Maak code" om te kunnen beginnen.</li>
+						<li>Klik op een kleur om hem toe te voegen.</li>
+						<li>Klik op <i class="fa fa-undo" aria-hidden="true"></i> om een kleur weg te halen.</li>
+						<li>Witte kleine pin betekent dat er een gekozen kleur in zit maar niet op de goede plaats.</li>
+						<li>Zwate kleine pin betekent dat er een gekozen kleur in zit en op de goede plaats.</li>
+						<li>Als je hebt gewonnen wordt de achtergrondkleur groen.</li>
+						<li>Als je hebt veloren wordt de achtergrondkleur rood.</li>
+						<div id="close" onclick="infohide()">
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</div>
+					</ul>
+				</div>
+			</section>
 		</div>
 	</header>
 	<main>
@@ -43,8 +60,8 @@
 		</div>
 		<div id="displaywindow">
 			<div id="mainwindow">
-				<div id="playfield">
-					<div class="section">
+				<section id="playfield">
+					<section class="section">
 						<div id="reveal-0" class="pin"></div>
 						<div id="reveal-1" class="pin"></div>
 						<div id="reveal-2" class="pin"></div>
@@ -52,152 +69,152 @@
 							<div class="reveal">
 								<p id="sometext">Code Reaveal</p>
 							</div>				
-					</div>
-					<div class="section">
+					</section>
+					<section class="section">
 						<div id="pin1-0" class="pin"></div>
 						<div id="pin1-1" class="pin"></div>
 						<div id="pin1-2" class="pin"></div>
 						<div id="pin1-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp1-0"></div>
 								<div class="sp" id="sp1-1"></div>
 								<div class="sp" id="sp1-2"></div>
 								<div class="sp" id="sp1-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin2-0" class="pin"></div>
 						<div id="pin2-1" class="pin"></div>
 						<div id="pin2-2" class="pin"></div>
 						<div id="pin2-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp2-0"></div>
 								<div class="sp" id="sp2-1"></div>
 								<div class="sp" id="sp2-2"></div>
 								<div class="sp" id="sp2-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin3-0" class="pin"></div>
 						<div id="pin3-1" class="pin"></div>
 						<div id="pin3-2" class="pin"></div>
 						<div id="pin3-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp3-0"></div>
 								<div class="sp" id="sp3-1"></div>
 								<div class="sp" id="sp3-2"></div>
 								<div class="sp" id="sp3-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin4-0" class="pin"></div>
 						<div id="pin4-1" class="pin"></div>
 						<div id="pin4-2" class="pin"></div>
 						<div id="pin4-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp4-0"></div>
 								<div class="sp" id="sp4-1"></div>
 								<div class="sp" id="sp4-2"></div>
 								<div class="sp" id="sp4-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin5-0" class="pin"></div>
 						<div id="pin5-1" class="pin"></div>
 						<div id="pin5-2" class="pin"></div>
 						<div id="pin5-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp5-0"></div>
 								<div class="sp" id="sp5-1"></div>
 								<div class="sp" id="sp5-2"></div>
 								<div class="sp" id="sp5-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin6-0" class="pin"></div>
 						<div id="pin6-1" class="pin"></div>
 						<div id="pin6-2" class="pin"></div>
 						<div id="pin6-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp6-0"></div>
 								<div class="sp" id="sp6-1"></div>
 								<div class="sp" id="sp6-2"></div>
 								<div class="sp" id="sp6-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin7-0" class="pin"></div>
 						<div id="pin7-1" class="pin"></div>
 						<div id="pin7-2" class="pin"></div>
 						<div id="pin7-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp7-0"></div>
 								<div class="sp" id="sp7-1"></div>
 								<div class="sp" id="sp7-2"></div>
 								<div class="sp" id="sp7-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin8-0" class="pin"></div>
 						<div id="pin8-1" class="pin"></div>
 						<div id="pin8-2" class="pin"></div>
 						<div id="pin8-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp8-0"></div>
 								<div class="sp" id="sp8-1"></div>
 								<div class="sp" id="sp8-2"></div>
 								<div class="sp" id="sp8-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin9-0" class="pin"></div>
 						<div id="pin9-1" class="pin"></div>
 						<div id="pin9-2" class="pin"></div>
 						<div id="pin9-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp9-0"></div>
 								<div class="sp" id="sp9-1"></div>
 								<div class="sp" id="sp9-2"></div>
 								<div class="sp" id="sp9-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin10-0" class="pin"></div>
 						<div id="pin10-1" class="pin"></div>
 						<div id="pin10-2" class="pin"></div>
 						<div id="pin10-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp10-0"></div>
 								<div class="sp" id="sp10-1"></div>
 								<div class="sp" id="sp10-2"></div>
 								<div class="sp" id="sp10-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin11-0" class="pin"></div>
 						<div id="pin11-1" class="pin"></div>
 						<div id="pin11-2" class="pin"></div>
 						<div id="pin11-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp11-0"></div>
 								<div class="sp" id="sp11-1"></div>
 								<div class="sp" id="sp11-2"></div>
 								<div class="sp" id="sp11-3"></div>
-							</div>
-					</div>
-					<div class="section">
+							</section>
+					</section>
+					<section class="section">
 						<div id="pin12-0" class="pin"></div>
 						<div id="pin12-1" class="pin"></div>
 						<div id="pin12-2" class="pin"></div>
 						<div id="pin12-3" class="pin"></div>
-							<div class="pins">
+							<section class="pins">
 								<div class="sp" id="sp12-0"></div>
 								<div class="sp" id="sp12-1"></div>
 								<div class="sp" id="sp12-2"></div>
 								<div class="sp" id="sp12-3"></div>
-							</div>
-					</div>
-				</div>
+							</section>
+					</section>
+				</section>
 			</div>
 		</div>	
 	</main>
