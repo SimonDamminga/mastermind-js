@@ -77,18 +77,19 @@ function iest(n){
 		for(var i = 0; i <= 3; i++){
 			document.getElementById("sp"+a+"-"+i).style.backgroundColor = keyBlack[i];		
 		}
-		if(a <= 1){
-			document.getElementById("mainwindow").style.backgroundColor = "red";
-			for(var i = 0; i <= code.length; i++){
-				document.getElementById("reveal-"+i).style.backgroundColor = code[i];
-			}
-		}	
 		if(keyBlack.length == 4){
 			document.getElementById("mainwindow").style.backgroundColor = "green";
 			for(var i = 0; i <= code.length; i++){
 				document.getElementById("reveal-"+i).style.backgroundColor = code[i];
 			}
 		}
+		if(a <= 1){
+			document.getElementById("mainwindow").style.backgroundColor = "red";
+			for(var i = 0; i <= code.length; i++){
+				document.getElementById("reveal-"+i).style.backgroundColor = code[i];
+			}
+		}	
+		
 		keyWhite = [];
 		keyBlack = [];
 		playerCode = [];
